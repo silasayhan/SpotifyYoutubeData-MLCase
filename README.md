@@ -1,23 +1,76 @@
-# Spotify YouTube Dataset Analizi
+# YouTube Viral Tahmin Projesi
 
-## Proje Hakkında
-Bu proje, Spotify ve YouTube veri seti kullanılarak müzik trendlerini analiz etmeyi amaçlamaktadır.  
- 
-Projede Python kullanılarak aşağıdaki sorulara cevap aranmıştır:
+Bu proje, Spotify ve YouTube veri seti kullanılarak müzik parçalarının YouTube’da viral olup olmayacağını tahmin etmeyi amaçlamaktadır.  
+Proje hem veri analizi (EDA) adımlarını hem de Random Forest Classifier modeli ile tahmin sürecini kapsamaktadır.
 
-### Analiz Soruları
-1. **Top 10 Artists** – YouTube’da en yüksek görüntülemeye sahip sanatçılar kimler?  
-2. **Top 10 Tracks** – Spotify’da en çok dinlenen parçalar hangileri?  
-3. **Albüm Türleri** – Spotify’daki en yaygın albüm türleri nelerdir? Her bir türde kaç parça var?  
-4. **Albüm Türlerine Göre Ortalama** – Ortalama Views, Likes ve Comments albüm türlerine göre nasıl değişiyor?  
-5. **Top 5 YouTube Channels** – En çok izlenmeye sahip kanallar hangileri?  
-6. **Top Track** – En yüksek görüntülenmeye sahip parça hangisi?  
-7. **Like-to-View Oranı** – YouTube’da Like-to-View oranı en yüksek 7 parça hangileri?  
-8. **Maximum Danceability** – En yüksek dans edilebilirliğe sahip parçaların bulunduğu albümler hangileri?  
-9. **Korelasyon Analizi** – Views, Likes, Comments ve Streams arasında korelasyon var mı?  
+---
 
-## Kullanılan Teknolojiler
-- Python  
-- Pandas, Numpy  
-- Matplotlib, Seaborn  
-- Scikit-learn
+## Proje Dosya Yapısı
+
+```
+SpotifyYoutube_MLCASE/
+│
+├── Spotify Youtube Dataset.csv # Veri Seti
+├── AboutDataset.txt # Veri Setinin Detaylı Açıklaması
+├── SpotifyYoutube_MLCase.ipynb # Yönergedeki Soruların Çözümleri ve EDA Adımları
+├── Model.ipynb # Viral Tahmin Modeli-Random Forest Modeli
+├── Model2.py # Viral Tahmin Modeli-Geliştirilmiş Random Forest Modeli
+├── Model2.2.ipynb # Model2'in Görsellerle Geliştirilmiş Versiyonu
+├── README.md # Proje Açıklamaları
+└── Outputs/ # Kod Çıktıları Ekran Görüntüleri
+    ├── Output1.png # EDA Adımları ve Sonuçları
+    ├── Output2.png # Eğitim ve Test Verileri Hakkında
+    ├── Output3.png # Sınıflandırma Raporu
+    └── Output4.png # Projenin Sonucu
+```
+
+---
+
+## Proje Açıklaması
+
+### 1. Veri Analizi (EDA)
+- Eksik veriler tespit edildi ve görselleştirildi.  
+- Zaman serisi özellikleri (Yıl, Ay, Gün, Saat, Mevsim) eklendi.  
+- Dağılımlar incelendi.  
+- Feature Engineering işlemleri gerçekleştirildi.
+
+> Veri setinin detaylı açıklaması ve proje kapsamında yanıtlanan sorular için: [AboutDataset.txt](./AboutDataset.txt)
+
+### 2. Viral Tahmin Modelleri
+- **Hedef Değişken:** `viral` (0/1) → Bir parçanın viral olup olmadığını ifade eder.
+- **Viral Tanımı:** Views > 10 milyon ise 1, değilse 0.
+- **Kullanılan Bağımsız Değişkenler:**  
+  Likes, Comments, Stream, Danceability, Energy, Valence ve türetilmiş özellikler.
+- **Model:** Random Forest Classifier  
+- **Özellikler:** Feature Engineering ile YouTube ve Spotify verilerinden türetilmiş yeni özellikler  
+
+---
+
+## Model Çıktıları (Model2.py)
+
+### Veri Seti Hakkında
+![Veri Seti Hakkında](Outputs/Output1.png)
+
+### Modelin Eğitimi
+![Modelin Eğitimi](Outputs/Output2.png)
+
+### Modelin Performansı
+![Modelin Performansı](Outputs/Output3.png)
+
+### Projenin Sonucu
+![Projenin Sonucu](Outputs/Output4.png)
+
+---
+
+## Kullanılan Teknolojiler & Kütüphaneler
+- Python 3.x  
+- Pandas, NumPy  
+- Matplotlib, Seaborn, Plotly  
+- Scikit-learn (RandomForestClassifier)  
+- Jupyter Notebook (.ipynb)  
+
+---
+
+## Referans
+- Kullanılan Veri Seti: [Spotify YouTube Data - Kaggle](https://www.kaggle.com/datasets/rohitgrewal/spotify-youtube-data)  
+
