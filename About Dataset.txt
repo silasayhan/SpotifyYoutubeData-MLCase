@@ -1,0 +1,23 @@
+About Dataset
+Spotify YouTube Dataset: Music Trends Across Platforms
+This dataset shows how popular songs perform on both Spotify and YouTube. It includes useful details about each song, like its name, artist, how many times it was played on Spotify, how many views it got on YouTube, and several audio features like danceability, energy, loudness, and tempo.
+
+Using this dataset, we answered multiple questions with Python in our Project.
+
+Q.1) Top 10 Artists - with the Highest Views on YouTube?
+
+Q.2) Top 10 Tracks - with the Highest Streams on Spotify?
+
+Q.3) What are the most common Album Types on Spotify? How many tracks belong to each album type?
+
+Q.4) How do the Average Views, Likes, and Comments are compared between different Album Types?
+
+Q.5) Top 5 YouTube Channels - based on the Views?
+
+Q.6) The Top Most Track - based on Views?
+
+Q.7) Which Top 7 Tracks have the highest Like-to-View ratio on YouTube?
+
+Q.8) Top Albums having the Tracks with Maximum Danceability?
+
+Q.9) What is the Correlation between Views, Likes, Comments, and Stream?
