@@ -1,7 +1,7 @@
 # YouTube Viral Tahmin Projesi
 
-Bu proje, Spotify ve YouTube veri seti kullanılarak müzik parçalarının YouTube’da viral olup olmayacağını tahmin etmeyi amaçlamaktadır.  
-Proje hem veri analizi (EDA) adımlarını hem de Random Forest Classifier modeli ile tahmin sürecini kapsamaktadır.
+Bu proje, Spotify ve YouTube veri seti kullanılarak müzik parçalarının YouTube’da viral olup olmayacağını tahmin etmeyi amaçlamaktadır.
+İlk olarak, veri setindeki küçük veri analizi çalışmalarını tamamladım. Ardından, bu analizlerden elde edilen bilgilerle kendi geliştirdiğim Random Forest Classifier modeli ile parçaların viral olma olasılıklarını tahmin ettim.
 
 ---
 
